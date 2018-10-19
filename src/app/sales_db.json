@@ -1,0 +1,39 @@
+{
+  "sales": [
+    {
+      "id": 0,
+      "date": "2003-07-12",
+      "typeOfsales": "Automobile",
+      "bookingText": "Prebooked",
+      "amount": "13902"
+    },
+    {
+      "id": 1,
+      "date": "2002-09-01",
+      "typeOfsales": "Food",
+      "bookingText": "Paid by Credit Card",
+      "amount": "14"
+    },
+    {
+      "id": 2,
+      "date": "2009-12-18",
+      "typeOfsales": "Rations",
+      "bookingText": "Unpaid",
+      "amount": "50"
+    },
+    {
+      "id": 3,
+      "date": "1983-11-19",
+      "typeOfsales": "Food",
+      "bookingText": "Payment in Process",
+      "amount": "20"
+    },
+    {
+      "id": 4,
+      "date": "1999-06-06",
+      "typeOfsales": "House",
+      "bookingText": "Unpaid",
+      "amount": "500000"
+    }
+  ]
+}

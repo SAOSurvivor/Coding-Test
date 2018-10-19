@@ -1,0 +1,42 @@
+<h2>My sales</h2>
+
+<button (click)="sortbydate()" >
+  Sort By Date
+</button>
+
+<div class="divider">
+</div>  
+
+<button (click)="sortbyamount()">
+  Sort By Amount
+</button>
+
+<ul class="sales">
+  <li *ngFor="let sale of sales">
+    <a routerLink="/detail/{{sale.id}}">
+      <span class="badge">{{sale.date}}</span> <span class="booking">{{sale.bookingText}}</span> <span class="amt">{{sale.amount}}</span>
+    </a>
+    <button class="delete" title="delete sale"
+      (click)="delete(sale)">x</button>
+  </li>
+</ul>
+
+<div>
+  <label>Date:
+    <input #date type="date" max="2018-10-09" />
+  </label>
+  <label>Type of sales:
+    <input #typeofsales required />
+  </label>
+  <label>Booking Text:
+    <input #bookingtext required/>
+  </label>
+  <label>Amount:
+    <input #amount type="number" maxlength="8" minlength="2" max="20000000" min="50" required="required"/>
+  </label>
+
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="add(date.value, typeofsales.value, bookingtext.value, amount.value); date.value = ''; typeofsales.value = ''; bookingtext.value = ''; amount.value = ''">
+    add
+  </button>
+</div>

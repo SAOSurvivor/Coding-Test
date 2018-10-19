@@ -1,0 +1,26 @@
+<div *ngIf="sale">
+  <h2>{{sale.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{sale.id}}</div>
+  <div>
+    <label>Date:
+      <input [(ngModel)]="sale.date" placeholder="Date" type="date" max="2018-10-09"/>
+    </label>
+  </div>
+  <div>
+    <label>Type of sales:
+      <input [(ngModel)]="sale.typeOfsales" placeholder="Type of sales"/>
+    </label>
+  </div>
+  <div>
+    <label>Booking Text:
+      <input [(ngModel)]="sale.bookingText" placeholder="Booking Text"/>
+    </label>
+  </div>
+  <div>
+    <label>Amount:
+      <input [(ngModel)]="sale.amount" placeholder="Amount" type="number" maxlength="8" minlength="2" max="20000000" min="50" required="required"/>
+    </label>
+  </div>
+  <button (click)="goBack()">go back</button>
+  <button (click)="save()">save</button>
+</div>
